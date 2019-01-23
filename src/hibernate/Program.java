@@ -21,14 +21,15 @@ public class Program {
 	private static void introducirDatos(Session session) {
 		
 		session.beginTransaction();
-		Empresa e = new Empresa("73594143P","Lemus Logisticas S.L", 23, "Av. Algemesí Nº21");
+		Empresa e = new Empresa("73594143P","Lemus Logistic S.L", 23, "Av. Algemesí Nº21");
 		Item i = new Item("Mc Extrem Bacon", 93);
 		java.util.Date d = new java.util.Date();
 		Pedido p = new Pedido(new java.sql.Date(d.getTime()));
 		
-		session.save(e);
-		session.save(i);
-		session.save(p);
+		session.saveOrUpdate(e);
+		session.saveOrUpdate(i);
+		session.saveOrUpdate(p);
+		//session.delete(e);
 		
 		session.getTransaction().commit();
 
@@ -47,4 +48,5 @@ public class Program {
 		
 		session.getTransaction().commit();
 	}
+	
 }

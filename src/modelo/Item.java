@@ -6,12 +6,16 @@ public class Item {
 	private String nombre;
 	private int cantidad;
 	
+	public Item() {
+		
+	}
+
 	public Item(int id, String nombre, int cantidad) {
 		this.id = id;
 		this.nombre = nombre;
 		this.cantidad = cantidad;
 	}
-	
+		
 	public Item(String nombre, int cantidad) {
 		
 		this.nombre = nombre;

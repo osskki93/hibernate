@@ -7,6 +7,10 @@ public class Pedido {
 	private int id;
 	private Date fecha;
 	
+	public Pedido() {
+		
+	}
+
 	public Pedido(int id, Date fecha) {
 		this.id = id;
 		this.fecha = fecha;
