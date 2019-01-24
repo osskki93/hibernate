@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 21-ene-2019 16:07:54 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 24-ene-2019 15:30:27 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="modelo.Item" table="ITEM">
+    <class name="modelo.Grupo" table="GRUPO">
         <id name="id" type="int">
             <column name="ID" />
             <generator class="increment" />
@@ -11,8 +11,11 @@
         <property name="nombre" type="java.lang.String">
             <column name="NOMBRE" />
         </property>
-        <property name="cantidad" type="int">
-            <column name="CANTIDAD" />
+        <property name="estilo" type="java.lang.String">
+            <column name="ESTILO" />
+        </property>
+        <property name="numeroMiembros" type="int">
+            <column name="NUMEROMIEMBROS" />
         </property>
     </class>
 </hibernate-mapping>
